@@ -15,7 +15,12 @@ pipeline {
             steps{
             echo 'welocme to devops'
             }
-        } 
+        }
+        stage ("webhook stage"){
+            steps{
+            echo 'welocme to webhooks'
+            }
+        }
     }
 }
         
