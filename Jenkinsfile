@@ -1,25 +1,19 @@
 pipeline {
-    agent any
-    environment {
-        PATH = "/opt/apache-maven-3.6.3/bin:$PATH"
-    }
-    stages {
-        stage("clone code"){
+    agent {label 'Node-1':'Node-2'}
+    stages{
+        stage ("Git Checkout"){
             steps{
-               git credentialsId: 'git_credentials', url: 'https://github.com/ravdy/hello-world.git'
+                git 'https://github.com/Mabasha545556/devops-.git'
             }
         }
-        stage("build code"){
+        stage ("Maven Build"){
             steps{
-              sh "mvn clean install"
+            sh 'mvn clean install package'
             }
-        }
-        stage("deploy"){
+        } 
+        stage ("webhook stage"){
             steps{
-              sshagent(['deploy_user']) {
-                 sh "scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@13.229.183.126:/opt/apache-tomcat-8.5.55/webapps"
-                 
-                }
+            echo 'welocme to webhooks'
             }
         }
     }
