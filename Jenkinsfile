@@ -1,6 +1,5 @@
 pipeline {
     agent Node-1
-    agent Node-2
     stages{
         stage ("Git Checkout"){
             steps{
