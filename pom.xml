@@ -21,19 +21,6 @@
   </modules>
   
  <distributionManagement>
-    <repository>
-      <id>my-nexus-snapshots</id>
-      <name>Internal Snapshot Releases</name>
-      <url>http://3.110.49.161:8081/repository/myrepository-snapshot/</url>
-    </repository>
-    <snapshotRepository>
-      <id>my-nexus-releases</id>
-      <name>Internal Releases</name>
-      <url>http://3.110.49.161:8081/repository/myrepository/</url>
-    </snapshotRepository>
-  </distributionManagement>
-
-  <distributionManagement>
     <site>
       <id>site-server</id>
       <name>Test Project Site</name>
@@ -228,5 +215,17 @@
   <prerequisites>
     <maven>3.0.3</maven>
   </prerequisites>
+  <distributionManagement>
+    <repository>
+      <id>my-nexus-snapshots</id>
+      <name>Internal Snapshot Releases</name>
+      <url>http://3.110.49.161:8081/repository/myrepository-snapshot/</url>
+    </repository>
+    <snapshotRepository>
+      <id>my-nexus-releases</id>
+      <name>Internal Releases</name>
+      <url>http://3.110.49.161:8081/repository/myrepository/</url>
+    </snapshotRepository>
+  </distributionManagement>       
 
 </project>
