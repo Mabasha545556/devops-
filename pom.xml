@@ -214,19 +214,6 @@
 
   <prerequisites>
     <maven>3.0.5</maven>
-  </prerequisites>
-         
-  <distributionManagement>
-    <repository>
-      <id>my-nexus-snapshots</id>
-      <name>Internal Snapshot Releases</name>
-      <url>http://3.110.49.161:8081/repository/myrepository-snapshot/</url>
-    </repository>
-    <snapshotRepository>
-      <id>my-nexus-releases</id>
-      <name>Internal Releases</name>
-      <url>http://3.110.49.161:8081/repository/myrepository/</url>
-    </snapshotRepository>
-  </distributionManagement>       
+  </prerequisites>       
 
 </project>
