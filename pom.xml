@@ -213,8 +213,9 @@
   </scm>
 
   <prerequisites>
-    <maven>3.0.3</maven>
+    <maven>3.0.5</maven>
   </prerequisites>
+         
   <distributionManagement>
     <repository>
       <id>my-nexus-snapshots</id>
